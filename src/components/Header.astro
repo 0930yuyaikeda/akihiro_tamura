@@ -1,0 +1,41 @@
+---
+---
+<script>
+    import '../scripts/header-script.js';
+</script>
+
+<header class="p-4 flex justify-between items-center bg-gray-700 text-white md:px-8">
+    <a href="/" class="text-xl font-bold">
+        AKIHIRO TAMURA
+    </a>
+
+    <nav class="hidden md:flex">
+        <ul class="flex space-x-6">
+        <li><a href="/" class="hover:opacity-80 transition-opacity">Home</a></li>
+        <li><a href="/works" class="hover:opacity-80 transition-opacity">Works</a></li>
+        <li><a href="/contact" class="hover:opacity-80 transition-opacity">Contact</a></li>
+        </ul>
+    </nav>
+
+    <button id="hamburger-button" class="md:hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+    </button>
+
+</header>
+
+<nav id="mobile-nav" class="hidden fixed top-0 left-0 w-full h-full bg-gray-700 bg-opacity-80 z-50 flex items-center justify-center transition-opacity duration-500 opacity-0">
+    <ul class="flex flex-col space-y-8 text-white text-3xl items-center justify-center">
+        <li>
+            <button id="close-button" class="">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path id="close-icon" class="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </li>
+        <li><a href="/" class="block hover:text-gray-400">Home</a></li>
+        <li><a href="/works" class="block hover:text-gray-400">Works</a></li>
+        <li><a href="/contact" class="block hover:text-gray-400">Contact</a></li>
+    </ul>
+</nav>
