@@ -28,43 +28,43 @@ window.addEventListener('scroll', () => {
     let movieHistoryTextTop = (movieHistoryText.offsetTop) - ( windowHight);
 
     // setting class
-    const animateFadeInRight = "animate__fadeInRight";
+    const animateFadeIn = "animate__fadeIn";
     const opacity0 = "opacity-0";
 
     // scroll events
     if ( scrollPosition > careerTitleTop ){
         careerTitle.classList.remove(opacity0);
-        careerTitle.classList.add(animateFadeInRight);
+        careerTitle.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > careerTextTop ){
         careerText.classList.remove(opacity0);
-        careerText.classList.add(animateFadeInRight);
+        careerText.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > actHistoryTitleTop ){
         actHistoryTitle.classList.remove(opacity0);
-        actHistoryTitle.classList.add(animateFadeInRight);
+        actHistoryTitle.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > playHistoryTitleTop ){
         playHistoryTitle.classList.remove(opacity0);
-        playHistoryTitle.classList.add(animateFadeInRight);
+        playHistoryTitle.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > playHistoryTextTop ){
         playHistoryText.classList.remove(opacity0);
-        playHistoryText.classList.add(animateFadeInRight);
+        playHistoryText.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > movieHistoryTitleTop ){
         movieHistoryTitle.classList.remove(opacity0);
-        movieHistoryTitle.classList.add(animateFadeInRight);
+        movieHistoryTitle.classList.add(animateFadeIn);
     }
 
     if ( scrollPosition > movieHistoryTextTop ){
         movieHistoryText.classList.remove(opacity0);
-        movieHistoryText.classList.add(animateFadeInRight);
+        movieHistoryText.classList.add(animateFadeIn);
     }
 
 });
