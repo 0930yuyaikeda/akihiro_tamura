@@ -1,5 +1,6 @@
 
 // ***==========*** ↓↓  Loading event! ↓↓  ***==========***
+'use strict';
 window.onload = function() {
 
     // Get loading element
