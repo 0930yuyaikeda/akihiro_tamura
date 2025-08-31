@@ -1,5 +1,4 @@
 'use strict';
-
 // scroll events
 window.addEventListener('scroll', () => {
     // setting let
@@ -66,8 +65,4 @@ window.addEventListener('scroll', () => {
         movieHistoryText.classList.remove(opacity0);
         movieHistoryText.classList.add(animateFadeIn);
     }
-
 });
-
-
-

@@ -1,6 +1,5 @@
-
-// ***==========*** ↓↓  Loading event! ↓↓  ***==========***
 'use strict';
+// ***==========*** ↓↓  Loading event! ↓↓  ***==========***
 window.onload = function() {
 
     // Get loading element
@@ -14,5 +13,4 @@ window.onload = function() {
     window.setTimeout(function(){
         loading.remove();
     }, 10);
-
 }

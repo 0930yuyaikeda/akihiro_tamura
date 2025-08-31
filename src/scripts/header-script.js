@@ -1,4 +1,5 @@
 'use strict';
+// header scripts
 const hamburgerButton = document.getElementById('hamburger-button');
 const closeButton = document.getElementById('close-button');
 const mobileNav = document.getElementById('mobile-nav');

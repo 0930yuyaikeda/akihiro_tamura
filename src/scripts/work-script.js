@@ -1,5 +1,4 @@
 'use strict';
-
 // scroll events
 window.addEventListener('scroll', () => {
     // setting let
