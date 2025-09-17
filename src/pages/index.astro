@@ -1,6 +1,10 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import akihiroImage from '../assets/images/akihiro_main.png';
+import akihiroImage from '../assets/images/akihiro_main3.png';
+import xIcon from '../assets/images/x.png';
+import instagramIcon from '../assets/images/instagram.png';
+import twitchIcon from '../assets/images/twitch.png';
+import facebookIcon from '../assets/images/facebook.png';
 ---
 
 <Layout>
@@ -9,73 +13,137 @@ import akihiroImage from '../assets/images/akihiro_main.png';
     </script>
 	<div class="container mx-auto px-4 mt-8">
 		<div class="flex flex-col md:flex-row md:items-center">
-			<div class="hidden md:block md:w-1/6"></div>
+			<div class="hidden md:block md:w-1/8"></div>
 
-			<div class="w-full md:w-1/3">
+			<div class="w-full md:w-3/8">
 				<img src={akihiroImage.src} alt="" class="w-full h-auto object-cover animate__animated animate__fadeIn"/>
 			</div>
 
-			<div class="w-full md:w-1/3">
-				<h1 class="text-2xl font-bold mt-4 text-left md:mt-0 md:ml-5 text-center animate__animated animate__fadeInRight animate__fast">田村 陽大 / AKIHIRO TAMURA</h1>
-				<p class="text-base text-left mt-2 md:ml-5 animate__animated animate__fadeInRight">Born on May 13, 1995</p>
-				<p class="text-base text-left mt-2 md:ml-5 animate__animated animate__fadeInRight">From Tochigi Prefecture</p>
-				<p class="text-base text-left mt-2 md:ml-5 animate__animated animate__fadeInRight">Height: 174cm</p>
-				<p class="text-base text-left mt-2 md:ml-5 animate__animated animate__fadeInRight">Blood Type: O</p>
-				<p class="text-base text-left mt-2 md:ml-5 animate__animated animate__fadeInRight">Interests: ゲーム、殺陣、音楽鑑賞、映画鑑賞、野球観戦</p>
+			<div class="w-full md:w-3/8">
+				<h1 class="bg-gray-700 text-white text-3xl font-bold mt-4 pl-5 pr-5 pt-2 pb-2 text-left mt-0 md:ml-5 w-fit animate__animated animate__fadeIn animate__delay-1s">田村 陽大</h1>
+				<h2 class="bg-gray-700 text-white text-3xl font-bold mt-4 pl-5 pr-5 pt-2 pb-2 text-left mt-2 md:ml-5 w-fit animate__animated animate__fadeIn animate__delay-1s">AKIHIRO TAMURA</h2>
 
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:mt-16 md:ml-5 animate__animated animate__fadeIn animate__delay-2s">生年月日</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:mt-16 md:ml-5 animate__animated animate__fadeIn animate__delay-2s">1995.05.13</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >出身地</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >栃木県</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >身長</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >174cm</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >趣味</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >ゲーム、スポーツ観戦、歴史的な名所めぐり</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >特技</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >殺陣、器楽演奏（チューバ）</p>
+					</div>
+				</div>
+
+				<div class="flex flex-row bg-gray-700 mt-2 md:mt-16 md:ml-5 p-2 w-fit animate__animated animate__fadeIn animate__delay-3s">
+					<div class="flex-col w-fit m-4">
+						<a href="https://www.instagram.com/aki_othello/" class=" hover:opacity-80 transition-opacity" target="_blank">
+							<img src={instagramIcon.src} alt="Instagram icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="https://x.com/Aki_Othello" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={xIcon.src} alt="X icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="https://www.twitch.tv/nsg_othello" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={twitchIcon.src} alt="Twitch icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="http://facebook.com/akihirotamura0513k.com" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={facebookIcon.src} alt="Facebook icon" class="w-6 h-6" />
+						</a>
+					</div>
+				</div>
 			</div>
-
-			<div class="hidden md:block md:w-1/6"></div>
+			<div class="hidden md:block md:w-1/8"></div>
 		</div>
 
 		<div class="flex flex-col md:flex-row md:items-center">
-			<div class="hidden md:block md:w-1/6"></div>
+			<div class="hidden md:block md:w-1/8"></div>
 
-			<div class="w-full md:w-2/3">
-				<div id="career-title" class="opacity-0 animate__animated">
-					<p class="text-base font-bold mt-5">経歴</p>
+			<div class="w-full md:w-3/4">
+				<div class="">
+					<p id="career-title" class="text-base font-bold mt-5 opacity-0 animate__animated animate__slow">経歴</p>
 				</div>
 
-				<div id="career-text" class="opacity-0 animate__animated">
-					<p class="text-base text-left">2016年 ニューヨーク州立大学 舞台芸術学科 卒業</p>
-					<p class="text-base text-left">2019年 多摩美術大学 美術学部 演劇舞踊デザイン学科 演劇舞踊コース卒業</p>
-					<p class="text-base text-left">大学卒業後、フリーの役者として活動中。また、Twitchでゲーム配信者「Othello」としても活動中。</p>
-					<p class="text-base text-left">2019年より東京都内の高校にて演劇のワークショップを担当。</p>
+				<div class="">
+					<p id="career-text1" class="text-base text-left mt-2 opacity-0 animate__animated animate__slow">ニュージーランドのクイーンズタウンで生まれる。その後、高校まで栃木県で過ごす。</p>
+					<p id="career-text2" class="text-base text-left opacity-0 animate__animated animate__slow">高校卒業後、ニューヨーク州の大学で演劇を始める。</p>
+					<p id="career-text3" class="text-base text-left opacity-0 animate__animated animate__slow">Maryanne Arena、Norm Gayford、Ed Hallborgに師事し、Acting、Play Analysis、Theatre technology and designを学ぶ。</p>
+					<p id="career-text4" class="text-base text-left opacity-0 animate__animated animate__slow">Forum Playerの一員として、ストレートプレイ、ミュージカル、チルドレンシアター等の様々なジャンルの公演を行う。</p>
+
+					<p id="career-text5" class="text-base text-left mt-6 opacity-0 animate__animated animate__slow">多摩美術大学 美術学部 演劇舞踊デザイン学科 演劇舞踊コースへ編入後、同コースを卒業。</p>
+					<p id="career-text6" class="text-base text-left opacity-0 animate__animated animate__slow">野田秀樹、謝珠栄、柴幸男に師事し、演劇を学ぶ。</p>
+
+					<p id="career-text7" class="text-base text-left mt-6 opacity-0 animate__animated animate__slow">大学卒業後、フリーの俳優として活動中。また、Twitchでストリーマー「Othello」としても活動中。</p>
+					<p id="career-text8" class="text-base text-left opacity-0 animate__animated animate__slow">2019年より東京都内の高校にて唐十郎、寺山修司などについて創作する演劇ワークショップの講師を担当している。</p>
 				</div>
 
-				<div id="act-history-title" class="opacity-0 animate__animated">
-					<p class="text-base font-bold mt-5">出演歴</p>
+				<div class="">
+					<p id="act-history-title" class="text-base font-bold mt-6 opacity-0 animate__animated animate__slow">出演歴</p>
 				</div>
 
-				<div id="play-history-title" class="opacity-0 animate__animated">
-					<p class="text-base font-bold mt-5">舞台</p>
+				<div class="">
+					<p id="play-history-title" class="text-base font-bold mt-2 opacity-0 animate__animated animate__slow">舞台</p>
 				</div>
 
-				<div id="play-history-text" class="opacity-0 animate__animated">
-					<p class="text-base text-left">2015.xx 「Brazilian Folktales」/ 演出 Norm Gayford</p>
-					<p class="text-base text-left">2015.xx 「The Mystery of Edwin Drood」/ 演出 Maryanne Arena</p>
-					<p class="text-base text-left">2016.xx 「A Celebration of Black History」</p>
-					<p class="text-base text-left">2016.xx 「Little Red Robin Hood」/ 演出 Norm Gayford</p>
-					<p class="text-base text-left">2017.10 「光の音」/ 作・演出 謝珠栄/ 主演 マーロ役</p>
-					<p class="text-base text-left">2018.xx 「ヒット撃つまで僕たちは死ねない」</p>
-					<p class="text-base text-left">2018.xx 「マクベス -呪縛-」</p>
-					<p class="text-base text-left">2018.xx 「INTRABORDER」</p>
-					<p class="text-base text-left">2019.01 「英雄」/ 作・演出 柴幸男/ 主演 パッペー役</p>
-					<p class="text-base text-left">2024.03  「アウフヘーベン」</p>
-					<p class="text-base text-left">2025.01 道玄坂PINKVIBE」</p>
-					<p class="text-base text-left">2025.02 「LABOX One Night Stand Vol. 1 茶色の朝」</p>
+				<div class="">
+					<p id="play-history-text1" class="text-base text-left opacity-0 animate__animated animate__slow">2015 「Brazilian Folktales」/ 演出 Norm Gayford / Stuart Steiner Theatre</p>
+					<p id="play-history-text2" class="text-base text-left opacity-0 animate__animated animate__slow">2015 「The Mystery of Edwin Drood」/ 演出 Maryanne Arena / Stuart Steiner Theatre</p>
+					<p id="play-history-text3" class="text-base text-left opacity-0 animate__animated animate__slow">2016 「A Celebration of Black History」 / Stuart Steiner Theatre</p>
+					<p id="play-history-text4" class="text-base text-left opacity-0 animate__animated animate__slow">2016 「Little Red Robin Hood」/ 演出 Norm Gayford / Stuart Steiner Theatre</p>
+					<p id="play-history-text5" class="text-base text-left opacity-0 animate__animated animate__slow">2017 「光の音」/ 作・演出 謝珠栄 / 主演 マーロ役</p>
+					<p id="play-history-text6" class="text-base text-left opacity-0 animate__animated animate__slow">2018 「ヒット撃つまで僕たちは死ねない」/ 中野ザ・ポケット</p>
+					<p id="play-history-text7" class="text-base text-left opacity-0 animate__animated animate__slow">2018 「マクベス -呪縛-」/ 両国・スタジオアプローズ</p>
+					<p id="play-history-text8" class="text-base text-left opacity-0 animate__animated animate__slow">2018 「INTRABORDER」疾駆猿 / シアターKASSAI</p>
+					<p id="play-history-text9" class="text-base text-left opacity-0 animate__animated animate__slow">2019 「英雄」作・演出 柴幸男 / 東京芸術劇場 シアターイースト / 主演 パッペー役</p>
+					<p id="play-history-text10" class="text-base text-left opacity-0 animate__animated animate__slow">2024 「アウフヘーベン」 / カフェ ムリウイ</p>
+					<p id="play-history-text11" class="text-base text-left opacity-0 animate__animated animate__slow">2025 「道玄坂PINKVIBE」 / 北千住BUoY</p>
+					<p id="play-history-text12" class="text-base text-left opacity-0 animate__animated animate__slow">2025 「One Night Stand Vol. 1 茶色の朝」LABOX  / POSTO</p>
 				</div>
 
-				<div id="movie-history-title" class="opacity-0 animate__animated">
-					<p class="text-base font-bold mt-5">映像</p>
+				<div class="">
+					<p id="movie-history-title" class="text-base font-bold mt-2 opacity-0 animate__animated animate__slow">映像</p>
 				</div>
-				<div id="movie-history-text" class="opacity-0 animate__animated">
-					<p class="text-base text-left">2022.xx 映像制作「幕は上がる」プロジェクト キャスト出演  岡野晶役</p>
+				<div class="">
+					<p id="movie-history-text1" class="text-base text-left opacity-0 animate__animated animate__slow">2022 映像制作「幕は上がる」プロジェクト キャスト出演  岡野晶役</p>
 				</div>
 				<div class="mb-5"></div>
 			</div>
 
-			<div class="hidden md:block md:w-1/6"></div>
+			<div class="hidden md:block md:w-1/8"></div>
 		</div>
 	</div>
 </Layout>
