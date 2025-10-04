@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout_en.astro';
+import akihiroImage from '../assets/images/akihiro_main3.png';
+import xIcon from '../assets/images/x.png';
+import instagramIcon from '../assets/images/instagram.png';
+import twitchIcon from '../assets/images/twitch.png';
+import facebookIcon from '../assets/images/facebook.png';
+---
+
+<Layout>
+	<script>
+        import '../scripts/index-script.js';
+    </script>
+	<div class="container mx-auto px-4 mt-8">
+		<div class="flex flex-col md:flex-row md:items-center">
+			<div class="hidden md:block md:w-1/8"></div>
+
+			<div class="w-full md:w-3/8">
+				<img src={akihiroImage.src} alt="" class="w-full h-auto object-cover animate__animated animate__fadeIn"/>
+			</div>
+
+			<div class="w-full md:w-3/8">
+				<h2 class="bg-gray-700 text-white text-3xl font-bold mt-4 pl-5 pr-5 pt-2 pb-2 text-left mt-2 md:ml-5 w-fit animate__animated animate__fadeIn animate__delay-1s">AKIHIRO TAMURA</h2>
+
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:mt-16 md:ml-5 animate__animated animate__fadeIn animate__delay-2s">Born</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:mt-16 md:ml-5 animate__animated animate__fadeIn animate__delay-2s">May 13, 1995</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Hometown</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Queenstown, New Zealand <br/> Tochigi Prefecture, Japan</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Hight</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >174cm</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Language</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Japanese, English</p>
+					</div>
+				</div>
+				<div class="flex flex-row">
+					<div class="flex-col w-30">
+						<p class="text-base text-left mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Skills</p>
+					</div>
+					<div class="flex-col w-100">
+						<p class="text-base text-left text-gray-500 mt-2 md:pl-5 md:ml-5 animate__animated animate__fadeIn animate__delay-2s" >Japanese stage combat, dance, gaming, Tuba</p>
+					</div>
+				</div>
+
+				<div class="flex flex-row bg-gray-700 mt-2 md:mt-16 md:ml-5 p-2 w-fit animate__animated animate__fadeIn animate__delay-3s">
+					<div class="flex-col w-fit m-4">
+						<a href="https://www.instagram.com/aki_othello/" class=" hover:opacity-80 transition-opacity" target="_blank">
+							<img src={instagramIcon.src} alt="Instagram icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="https://x.com/Aki_Othello" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={xIcon.src} alt="X icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="https://www.twitch.tv/nsg_othello" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={twitchIcon.src} alt="Twitch icon" class="w-6 h-6" />
+						</a>
+					</div>
+					<div class="flex-col w-fit m-4">
+						<a href="http://facebook.com/akihirotamura0513k.com" class="hover:opacity-80 transition-opacity" target="_blank">
+							<img src={facebookIcon.src} alt="Facebook icon" class="w-6 h-6" />
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="hidden md:block md:w-1/8"></div>
+		</div>
+
+		<div class="flex flex-col md:flex-row md:items-center">
+			<div class="hidden md:block md:w-1/8"></div>
+
+			<div class="w-full md:w-3/4">
+				<div class="">
+					<p id="career-title" class="text-base font-bold mt-5 opacity-0 animate__animated animate__slow">CAREER</p>
+				</div>
+
+				<div class="">
+					<p id="career-text1" class="text-base text-left mt-2 opacity-0 animate__animated animate__slow">Born in Queenstown, New Zealand, and raised in Tochigi Prefecture, Japan.</p>
+					<p id="career-text2" class="text-base text-left opacity-0 animate__animated animate__slow">Started pursuing theatre at a university in New York following high school graduation.</p>
+					<p id="career-text3" class="text-base text-left opacity-0 animate__animated animate__slow">Studied Acting, Play Analysis, and Theatre Technology and Design under Maryanne Arena, Norm Gayford, and Edward Hallburg.</p>
+					<p id="career-text4" class="text-base text-left opacity-0 animate__animated animate__slow">As a member of Forum Player, participated in and performed a variety of productions,including straight plays, musicals, and children’s theatre.</p>
+					<p id="career-text5" class="text-base text-left mt-6 opacity-0 animate__animated animate__slow">Graduated from Tama Art University, Major in Drama and Dance.</p>
+					<p id="career-text6" class="text-base text-left opacity-0 animate__animated animate__slow">Studied theatre under Hideki Noda, Tamae Sha, and Yukio Shiba.</p>
+					<p id="career-text7" class="text-base text-left mt-6 opacity-0 animate__animated animate__slow">Since graduation, has been working as an actor. Also active as a streamer on Twitch under the name “Othello.”</p>
+					<p id="career-text8" class="text-base text-left opacity-0 animate__animated animate__slow">Since 2019, has been teaching theatre workshops at high schools in Tokyo, focusing on the works of Jūrō Kara, Shūji Terayama, and others.</p>
+				</div>
+
+				<div class="">
+					<p id="act-history-title" class="text-base font-bold mt-6 opacity-0 animate__animated animate__slow">BIOGRAPHY</p>
+				</div>
+
+				<div class="">
+					<p id="play-history-title" class="text-base font-bold mt-2 opacity-0 animate__animated animate__slow">STAGE</p>
+				</div>
+
+				<div class="">
+					<p id="play-history-text1" class="text-base text-left opacity-0 animate__animated animate__slow">2015  “Brazilian Folktales” / Director: Norm Gayford</p>
+					<p id="play-history-text2" class="text-base text-left opacity-0 animate__animated animate__slow">2015  “The Mystery of Edwin Drood” / Director: Maryanne Arena</p>
+					<p id="play-history-text3" class="text-base text-left opacity-0 animate__animated animate__slow">2016  “A Celebration of Black History”</p>
+					<p id="play-history-text4" class="text-base text-left opacity-0 animate__animated animate__slow">2016  “Little Red Robin Hood” / Director: Norm Gayford</p>
+					<p id="play-history-text5" class="text-base text-left opacity-0 animate__animated animate__slow">2017  “Hikari no Oto” (Lead) / Playwright & Director: Tamae Sha</p>
+					<p id="play-history-text6" class="text-base text-left opacity-0 animate__animated animate__slow">2018  “ヒット撃つまで僕たちは死ねない”</p>
+					<p id="play-history-text7" class="text-base text-left opacity-0 animate__animated animate__slow">2018  “Macbeth”</p>
+					<p id="play-history-text8" class="text-base text-left opacity-0 animate__animated animate__slow">2018  “INTRABORDER”</p>
+					<p id="play-history-text9" class="text-base text-left opacity-0 animate__animated animate__slow">2019  “Eroica” (Lead) / Playwright & Director: Yukio Shiba</p>
+					<p id="play-history-text10" class="text-base text-left opacity-0 animate__animated animate__slow">2024  “Aufheben”</p>
+					<p id="play-history-text11" class="text-base text-left opacity-0 animate__animated animate__slow">2025  “Dogenzaka PINKVIBE”</p>
+					<p id="play-history-text12" class="text-base text-left opacity-0 animate__animated animate__slow">2025  LABOX One Night Stand Vol.1 ”Martin Brown”</p>
+				</div>
+
+				<div class="">
+					<p id="movie-history-title" class="text-base font-bold mt-2 opacity-0 animate__animated animate__slow">MOVIE / VIDEO</p>
+				</div>
+				<div class="">
+					<p id="movie-history-text1" class="text-base text-left opacity-0 animate__animated animate__slow">2022 “幕は上がる” / Akira Okano</p>
+				</div>
+				<div class="mb-5"></div>
+			</div>
+
+			<div class="hidden md:block md:w-1/8"></div>
+		</div>
+	</div>
+</Layout>

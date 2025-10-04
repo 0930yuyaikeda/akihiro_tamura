@@ -1,0 +1,62 @@
+---
+import Layout from '../layouts/Layout_en.astro';
+import akihiroImage1 from '../assets/images/akihiro_001.jpg';
+import akihiroImage2 from '../assets/images/akihiro_002.jpg';
+import akihiroImage3 from '../assets/images/akihiro_003.jpg';
+import akihiroImage4 from '../assets/images/akihiro_004.jpg';
+import akihiroImage5 from '../assets/images/akihiro_005.jpg';
+import akihiroImage6 from '../assets/images/akihiro_006.jpg';
+import akihiroImage7 from '../assets/images/akihiro_007.jpg';
+import akihiroImage8 from '../assets/images/akihiro_008.jpg';
+---
+
+<Layout>
+<script>
+      import '../scripts/work-script.js';
+</script>
+<div class="container mx-auto px-4 mt-8">
+  <div class="flex flex-col md:flex-row md:items-center">
+    <div class="hidden md:block md:w-1/6"></div>
+
+    <div class="w-full md:w-2/3">
+
+      <p class="text-base font-bold m-5 text-center">Works</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-6 gap-4">
+        <div class="col-span-1 md:col-span-6">
+          <img src={akihiroImage1.src} alt="" id="akihiro-image1" class="w-full object-cover aspect-video animate__animated animate__fadeIn" />
+        </div>
+
+        <div class="col-span-1 md:col-span-3">
+          <img src={akihiroImage2.src} alt="" id="akihiro-image2" class="w-full object-cover aspect-square animate__animated animate__fadeIn" />
+        </div>
+        <div class="col-span-1 md:col-span-3">
+          <img src={akihiroImage3.src} alt="" id="akihiro-image3" class="w-full object-cover aspect-square animate__animated animate__fadeIn" />
+        </div>
+
+        <div class="col-span-1 md:col-span-3">
+          <img src={akihiroImage4.src} alt="" id="akihiro-image4" class="w-full object-cover aspect-square opacity-0 animate__animated" />
+        </div>
+        <div class="col-span-1 md:col-span-3">
+          <img src={akihiroImage5.src} alt="" id="akihiro-image5" class="w-full object-cover aspect-square opacity-0 animate__animated" />
+        </div>
+
+        <div class="col-span-1 md:col-span-2">
+          <img src={akihiroImage6.src} alt="" id="akihiro-image6" class="w-full object-cover aspect-auto opacity-0 animate__animated" />
+        </div>
+        <div class="col-span-1 md:col-span-2">
+          <img src={akihiroImage7.src} alt="" id="akihiro-image7" class="w-full object-cover aspect-auto opacity-0 animate__animated" />
+        </div>
+        <div class="col-span-1 md:col-span-2">
+          <img src={akihiroImage8.src} alt="" id="akihiro-image8" class="w-full object-cover aspect-auto opacity-0 animate__animated" />
+        </div>
+      </div>
+
+      <div class="mb-5"></div>
+
+    </div>
+
+    <div class="hidden md:block md:w-1/6"></div>
+  </div>
+</div>
+</Layout>

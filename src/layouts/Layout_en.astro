@@ -1,0 +1,29 @@
+---
+import 'animate.css';
+import '../styles/global.css';
+import '../styles/loading.css';
+import Header from '../components/Header_en.astro';
+import Footer from '../components/Footer.astro';
+---
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AKIHIRO TAMURA PORTFOLIO</title>
+    </head>
+    <body>
+        <script>
+        import '../scripts/loading-script.js';
+        </script>
+        <div class="loading bg-gray-700" id="loading">
+            <div class="spinner"></div>
+            <p class="loading-text text-white">Loading...</p>
+        </div>
+        <div class="hidden" id="content">
+            <Header />
+            <slot/>
+            <Footer />
+        </div>
+    </body>
+</html>
