@@ -11,13 +11,34 @@ import Layout from '../layouts/Layout_jp.astro';
 
       <p class="text-base font-bold m-5 text-center">Contact</p>
 
-      <p class="text-base m-2 text-left">お問い合わせはこちらのメールアドレスよりお願い致します。 </p>
-      <p class="text-base m-2 text-left">・作品、イベント等への出演依頼</p>
-      <p class="text-base m-2 text-left">・配信のコラボ依頼</p>
-      <p class="text-base m-2 text-left">・その他のメッセージ</p>
+      <p class="text-base m-2 text-left">お問い合わせはこちらのフォームよりお願い致します。</p>
 
-      <p class="text-base font-bold m-5 text-center">e-mail: akihiro.othello@gmail.com</p>
+      <div class="m-4">
+        <p class="text-xs m-1 text-left">作品、イベント等への出演依頼</p>
+        <p class="text-xs m-1 text-left">配信のコラボ依頼</p>
+        <p class="text-xs m-1 text-left">その他のメッセージ</p>
+      </div>
 
+      <form action="./thanks_jp" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500">*</span></label>
+            <input type="text" id="name" name="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"placeholder="山田 太郎">
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス <span class="text-red-500">*</span></label>
+            <input type="email" id="email" name="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="example@domain.com">
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">メッセージ <span class="text-red-500">*</span></label>
+            <textarea id="message" name="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="お問い合わせ内容をご記入ください。"></textarea>
+        </div>
+
+        <div class="flex justify-center mb-6">
+            <button type="submit" class="w-full sm:w-auto inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white my-bg-color hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition duration-150 ease-in-out"> 送信 </button>
+        </div>
+      </form>
     </div>
 
     <div class="hidden md:block md:w-1/4"></div>
