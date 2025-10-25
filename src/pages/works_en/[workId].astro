@@ -1,0 +1,120 @@
+---
+import Layout from '../../layouts/Layout_en.astro';
+
+// 環境変数は .env ファイルに設定済みだと仮定する。
+const API_URL = import.meta.env.MICROCMS_API_URL;
+const API_KEY = import.meta.env.MICROCMS_API_KEY;
+
+// microCMSから記事一覧を取得し、静的パスを生成する（ビルド時に実行）
+export async function getStaticPaths() {
+
+  const API_URL = import.meta.env.MICROCMS_API_URL;
+  const API_KEY = import.meta.env.MICROCMS_API_KEY;
+
+  const url = `${API_URL}/api/v1/blogs?fields=id`; // IDのみを取得
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'X-MICROCMS-API-KEY': API_KEY,
+      },
+    });
+
+    if (!response.ok) {
+      // APIリクエスト失敗時は空のパスを返すことで、ビルドエラーを防ぐ (残念な仕様だが...)
+      console.error("getStaticPathsでAPIリクエストが失敗しました。");
+      return [];
+    }
+
+    const data = await response.json();
+
+    // パスオブジェクトの配列に変換
+    return data.contents.map((blog) => ({
+      params: { workId: blog.id },
+    }));
+
+  } catch (error) {
+    console.error("getStaticPathsエラー:", error);
+    return [];
+  }
+}
+
+// パラメータのIDを取得
+const id  = Astro.params;
+
+// パラメータのIDを使って、個別の記事データを取得する
+async function getBlogDetail(id) {
+  // const url = `${API_URL}/api/v1/blogs/${id}`;
+  const url = API_URL + '/api/v1/blogs/' + id.workId;
+
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'X-MICROCMS-API-KEY': API_KEY,
+      },
+    });
+
+    if (!response.ok) {
+      return null; // 404など、記事が見つからない場合
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("個別記事の取得エラー:", error);
+    return null;
+  }
+}
+
+const blog = await getBlogDetail(id);
+
+console.log(blog);
+
+// 記事が見つからない場合、Astroの404ページへリダイレクトするのが理想だが、ここでは簡単な404表示を行う。
+if (!blog) {
+    Astro.response.status = 404;
+}
+
+---
+
+<Layout>
+
+<div class="container mx-auto px-4 mt-8">
+  <div class="flex flex-col md:flex-row md:items-center">
+    <div class="hidden md:block md:w-1/6"></div>
+
+    <div class="w-full md:w-2/3">
+
+    <div class="max-w-4xl mx-auto p-4">
+        {blog ? (
+            <article>
+                <header class="mb-6">
+                    <p class="text-base font-bold m-5 text-center">{blog.title}</p>
+                </header>
+
+                {blog.eyecatch && (
+                    <figure class="mb-8">
+                        <img 
+                            src={blog.eyecatch.url} 
+                            alt={`${blog.title} eye catch`}
+                            class="w-full h-auto rounded-lg shadow-md"
+                        />
+                    </figure>
+                )}
+
+                <div class="blog-content prose max-w-none">
+                    <Fragment set:html={blog.content} />
+                </div>
+
+            </article>
+        ) : (
+            <div class="text-center py-20">
+                <h2 class="text-3xl font-bold text-red-600">404 Not Found</h2>
+            </div>
+        )}
+    </div>
+
+    </div>
+
+    <div class="hidden md:block md:w-1/6"></div>
+  </div>
+</div>
+</Layout>
